@@ -9,23 +9,318 @@
 
 // Include C++ implementation defined types
 #include "Addons-Swift-Cxx-Umbrella.hpp"
-#include "HybridAddonsSpecSwift.hpp"
+#include "HybridAppRatingSpecSwift.hpp"
+#include "HybridClipboardSpecSwift.hpp"
+#include "HybridCompressorSpecSwift.hpp"
+#include "HybridContactsSpecSwift.hpp"
+#include "HybridDeviceInfoSpecSwift.hpp"
+#include "HybridDocumentsSpecSwift.hpp"
+#include "HybridFileSystemSpecSwift.hpp"
+#include "HybridGeoLocationSpecSwift.hpp"
+#include "HybridLocalizeSpecSwift.hpp"
+#include "HybridMimeSpecSwift.hpp"
+#include "HybridPermissionsSpecSwift.hpp"
+#include "HybridScreenshotSpecSwift.hpp"
+#include "HybridSoundPlayerSpecSwift.hpp"
+#include "HybridSoundRecorderSpecSwift.hpp"
+#include "HybridUuidSpecSwift.hpp"
+#include "HybridVolumeSpecSwift.hpp"
 
 namespace margelo::nitro::addons::bridge::swift {
 
-  // pragma MARK: std::shared_ptr<HybridAddonsSpec>
-  std::shared_ptr<HybridAddonsSpec> create_std__shared_ptr_HybridAddonsSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
-    Addons::HybridAddonsSpec_cxx swiftPart = Addons::HybridAddonsSpec_cxx::fromUnsafe(swiftUnsafePointer);
-    return std::make_shared<margelo::nitro::addons::HybridAddonsSpecSwift>(swiftPart);
+  // pragma MARK: std::shared_ptr<HybridAppRatingSpec>
+  std::shared_ptr<HybridAppRatingSpec> create_std__shared_ptr_HybridAppRatingSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridAppRatingSpec_cxx swiftPart = Addons::HybridAppRatingSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridAppRatingSpecSwift>(swiftPart);
   }
-  void* NON_NULL get_std__shared_ptr_HybridAddonsSpec_(std__shared_ptr_HybridAddonsSpec_ cppType) {
-    std::shared_ptr<margelo::nitro::addons::HybridAddonsSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridAddonsSpecSwift>(cppType);
+  void* NON_NULL get_std__shared_ptr_HybridAppRatingSpec_(std__shared_ptr_HybridAppRatingSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridAppRatingSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridAppRatingSpecSwift>(cppType);
     #ifdef NITRO_DEBUG
     if (swiftWrapper == nullptr) [[unlikely]] {
-      throw std::runtime_error("Class \"HybridAddonsSpec\" is not implemented in Swift!");
+      throw std::runtime_error("Class \"HybridAppRatingSpec\" is not implemented in Swift!");
     }
     #endif
-    Addons::HybridAddonsSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    Addons::HybridAppRatingSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::function<void(const std::string& /* result */)>
+  Func_void_std__string create_Func_void_std__string(void* NON_NULL swiftClosureWrapper) noexcept {
+    auto swiftClosure = Addons::Func_void_std__string::fromUnsafe(swiftClosureWrapper);
+    return [swiftClosure = std::move(swiftClosure)](const std::string& result) mutable -> void {
+      swiftClosure.call(result);
+    };
+  }
+  
+  // pragma MARK: std::function<void(const std::exception_ptr& /* error */)>
+  Func_void_std__exception_ptr create_Func_void_std__exception_ptr(void* NON_NULL swiftClosureWrapper) noexcept {
+    auto swiftClosure = Addons::Func_void_std__exception_ptr::fromUnsafe(swiftClosureWrapper);
+    return [swiftClosure = std::move(swiftClosure)](const std::exception_ptr& error) mutable -> void {
+      swiftClosure.call(error);
+    };
+  }
+  
+  // pragma MARK: std::function<void(const std::vector<std::string>& /* result */)>
+  Func_void_std__vector_std__string_ create_Func_void_std__vector_std__string_(void* NON_NULL swiftClosureWrapper) noexcept {
+    auto swiftClosure = Addons::Func_void_std__vector_std__string_::fromUnsafe(swiftClosureWrapper);
+    return [swiftClosure = std::move(swiftClosure)](const std::vector<std::string>& result) mutable -> void {
+      swiftClosure.call(result);
+    };
+  }
+  
+  // pragma MARK: std::function<void(bool /* result */)>
+  Func_void_bool create_Func_void_bool(void* NON_NULL swiftClosureWrapper) noexcept {
+    auto swiftClosure = Addons::Func_void_bool::fromUnsafe(swiftClosureWrapper);
+    return [swiftClosure = std::move(swiftClosure)](bool result) mutable -> void {
+      swiftClosure.call(result);
+    };
+  }
+  
+  // pragma MARK: std::function<void()>
+  Func_void create_Func_void(void* NON_NULL swiftClosureWrapper) noexcept {
+    auto swiftClosure = Addons::Func_void::fromUnsafe(swiftClosureWrapper);
+    return [swiftClosure = std::move(swiftClosure)]() mutable -> void {
+      swiftClosure.call();
+    };
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridClipboardSpec>
+  std::shared_ptr<HybridClipboardSpec> create_std__shared_ptr_HybridClipboardSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridClipboardSpec_cxx swiftPart = Addons::HybridClipboardSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridClipboardSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridClipboardSpec_(std__shared_ptr_HybridClipboardSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridClipboardSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridClipboardSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridClipboardSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridClipboardSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridCompressorSpec>
+  std::shared_ptr<HybridCompressorSpec> create_std__shared_ptr_HybridCompressorSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridCompressorSpec_cxx swiftPart = Addons::HybridCompressorSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridCompressorSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridCompressorSpec_(std__shared_ptr_HybridCompressorSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridCompressorSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridCompressorSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridCompressorSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridCompressorSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridContactsSpec>
+  std::shared_ptr<HybridContactsSpec> create_std__shared_ptr_HybridContactsSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridContactsSpec_cxx swiftPart = Addons::HybridContactsSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridContactsSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridContactsSpec_(std__shared_ptr_HybridContactsSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridContactsSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridContactsSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridContactsSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridContactsSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridDeviceInfoSpec>
+  std::shared_ptr<HybridDeviceInfoSpec> create_std__shared_ptr_HybridDeviceInfoSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridDeviceInfoSpec_cxx swiftPart = Addons::HybridDeviceInfoSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridDeviceInfoSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridDeviceInfoSpec_(std__shared_ptr_HybridDeviceInfoSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridDeviceInfoSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridDeviceInfoSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridDeviceInfoSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridDeviceInfoSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridDocumentsSpec>
+  std::shared_ptr<HybridDocumentsSpec> create_std__shared_ptr_HybridDocumentsSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridDocumentsSpec_cxx swiftPart = Addons::HybridDocumentsSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridDocumentsSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridDocumentsSpec_(std__shared_ptr_HybridDocumentsSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridDocumentsSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridDocumentsSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridDocumentsSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridDocumentsSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridFileSystemSpec>
+  std::shared_ptr<HybridFileSystemSpec> create_std__shared_ptr_HybridFileSystemSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridFileSystemSpec_cxx swiftPart = Addons::HybridFileSystemSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridFileSystemSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridFileSystemSpec_(std__shared_ptr_HybridFileSystemSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridFileSystemSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridFileSystemSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridFileSystemSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridFileSystemSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridGeoLocationSpec>
+  std::shared_ptr<HybridGeoLocationSpec> create_std__shared_ptr_HybridGeoLocationSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridGeoLocationSpec_cxx swiftPart = Addons::HybridGeoLocationSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridGeoLocationSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridGeoLocationSpec_(std__shared_ptr_HybridGeoLocationSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridGeoLocationSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridGeoLocationSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridGeoLocationSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridGeoLocationSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridLocalizeSpec>
+  std::shared_ptr<HybridLocalizeSpec> create_std__shared_ptr_HybridLocalizeSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridLocalizeSpec_cxx swiftPart = Addons::HybridLocalizeSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridLocalizeSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridLocalizeSpec_(std__shared_ptr_HybridLocalizeSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridLocalizeSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridLocalizeSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridLocalizeSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridLocalizeSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridMimeSpec>
+  std::shared_ptr<HybridMimeSpec> create_std__shared_ptr_HybridMimeSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridMimeSpec_cxx swiftPart = Addons::HybridMimeSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridMimeSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridMimeSpec_(std__shared_ptr_HybridMimeSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridMimeSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridMimeSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridMimeSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridMimeSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridPermissionsSpec>
+  std::shared_ptr<HybridPermissionsSpec> create_std__shared_ptr_HybridPermissionsSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridPermissionsSpec_cxx swiftPart = Addons::HybridPermissionsSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridPermissionsSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridPermissionsSpec_(std__shared_ptr_HybridPermissionsSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridPermissionsSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridPermissionsSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridPermissionsSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridPermissionsSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridScreenshotSpec>
+  std::shared_ptr<HybridScreenshotSpec> create_std__shared_ptr_HybridScreenshotSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridScreenshotSpec_cxx swiftPart = Addons::HybridScreenshotSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridScreenshotSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridScreenshotSpec_(std__shared_ptr_HybridScreenshotSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridScreenshotSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridScreenshotSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridScreenshotSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridScreenshotSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridSoundPlayerSpec>
+  std::shared_ptr<HybridSoundPlayerSpec> create_std__shared_ptr_HybridSoundPlayerSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridSoundPlayerSpec_cxx swiftPart = Addons::HybridSoundPlayerSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridSoundPlayerSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridSoundPlayerSpec_(std__shared_ptr_HybridSoundPlayerSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridSoundPlayerSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridSoundPlayerSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridSoundPlayerSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridSoundPlayerSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridSoundRecorderSpec>
+  std::shared_ptr<HybridSoundRecorderSpec> create_std__shared_ptr_HybridSoundRecorderSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridSoundRecorderSpec_cxx swiftPart = Addons::HybridSoundRecorderSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridSoundRecorderSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridSoundRecorderSpec_(std__shared_ptr_HybridSoundRecorderSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridSoundRecorderSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridSoundRecorderSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridSoundRecorderSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridSoundRecorderSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridUuidSpec>
+  std::shared_ptr<HybridUuidSpec> create_std__shared_ptr_HybridUuidSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridUuidSpec_cxx swiftPart = Addons::HybridUuidSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridUuidSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridUuidSpec_(std__shared_ptr_HybridUuidSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridUuidSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridUuidSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridUuidSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridUuidSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
+    return swiftPart.toUnsafe();
+  }
+  
+  // pragma MARK: std::shared_ptr<HybridVolumeSpec>
+  std::shared_ptr<HybridVolumeSpec> create_std__shared_ptr_HybridVolumeSpec_(void* NON_NULL swiftUnsafePointer) noexcept {
+    Addons::HybridVolumeSpec_cxx swiftPart = Addons::HybridVolumeSpec_cxx::fromUnsafe(swiftUnsafePointer);
+    return std::make_shared<margelo::nitro::addons::HybridVolumeSpecSwift>(swiftPart);
+  }
+  void* NON_NULL get_std__shared_ptr_HybridVolumeSpec_(std__shared_ptr_HybridVolumeSpec_ cppType) {
+    std::shared_ptr<margelo::nitro::addons::HybridVolumeSpecSwift> swiftWrapper = std::dynamic_pointer_cast<margelo::nitro::addons::HybridVolumeSpecSwift>(cppType);
+    #ifdef NITRO_DEBUG
+    if (swiftWrapper == nullptr) [[unlikely]] {
+      throw std::runtime_error("Class \"HybridVolumeSpec\" is not implemented in Swift!");
+    }
+    #endif
+    Addons::HybridVolumeSpec_cxx& swiftPart = swiftWrapper->getSwiftPart();
     return swiftPart.toUnsafe();
   }
 

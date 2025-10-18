@@ -10,13 +10,13 @@
 #include "HybridSoundRecorderSpec.hpp"
 
 // Forward declaration of `HybridSoundRecorderSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridSoundRecorderSpec_cxx; }
+namespace Addons { class HybridSoundRecorderSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridSoundRecorderSpecSwift: public virtual HybridSoundRecorderSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridSoundRecorderSpecSwift(const NitroAddons::HybridSoundRecorderSpec_cxx& swiftPart):
+    explicit HybridSoundRecorderSpecSwift(const Addons::HybridSoundRecorderSpec_cxx& swiftPart):
       HybridObject(HybridSoundRecorderSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridSoundRecorderSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridSoundRecorderSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridSoundRecorderSpec_cxx _swiftPart;
+    Addons::HybridSoundRecorderSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

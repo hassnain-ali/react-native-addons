@@ -10,13 +10,13 @@
 #include "HybridVolumeSpec.hpp"
 
 // Forward declaration of `HybridVolumeSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridVolumeSpec_cxx; }
+namespace Addons { class HybridVolumeSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridVolumeSpecSwift: public virtual HybridVolumeSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridVolumeSpecSwift(const NitroAddons::HybridVolumeSpec_cxx& swiftPart):
+    explicit HybridVolumeSpecSwift(const Addons::HybridVolumeSpec_cxx& swiftPart):
       HybridObject(HybridVolumeSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridVolumeSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridVolumeSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridVolumeSpec_cxx _swiftPart;
+    Addons::HybridVolumeSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

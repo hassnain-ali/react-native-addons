@@ -10,13 +10,13 @@
 #include "HybridScreenshotSpec.hpp"
 
 // Forward declaration of `HybridScreenshotSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridScreenshotSpec_cxx; }
+namespace Addons { class HybridScreenshotSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridScreenshotSpecSwift: public virtual HybridScreenshotSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridScreenshotSpecSwift(const NitroAddons::HybridScreenshotSpec_cxx& swiftPart):
+    explicit HybridScreenshotSpecSwift(const Addons::HybridScreenshotSpec_cxx& swiftPart):
       HybridObject(HybridScreenshotSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridScreenshotSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridScreenshotSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridScreenshotSpec_cxx _swiftPart;
+    Addons::HybridScreenshotSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

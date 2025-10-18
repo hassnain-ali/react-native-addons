@@ -10,13 +10,13 @@
 #include "HybridMimeSpec.hpp"
 
 // Forward declaration of `HybridMimeSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridMimeSpec_cxx; }
+namespace Addons { class HybridMimeSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridMimeSpecSwift: public virtual HybridMimeSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridMimeSpecSwift(const NitroAddons::HybridMimeSpec_cxx& swiftPart):
+    explicit HybridMimeSpecSwift(const Addons::HybridMimeSpec_cxx& swiftPart):
       HybridObject(HybridMimeSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridMimeSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridMimeSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridMimeSpec_cxx _swiftPart;
+    Addons::HybridMimeSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

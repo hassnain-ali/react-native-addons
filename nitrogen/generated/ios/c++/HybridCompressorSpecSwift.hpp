@@ -10,13 +10,13 @@
 #include "HybridCompressorSpec.hpp"
 
 // Forward declaration of `HybridCompressorSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridCompressorSpec_cxx; }
+namespace Addons { class HybridCompressorSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridCompressorSpecSwift: public virtual HybridCompressorSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridCompressorSpecSwift(const NitroAddons::HybridCompressorSpec_cxx& swiftPart):
+    explicit HybridCompressorSpecSwift(const Addons::HybridCompressorSpec_cxx& swiftPart):
       HybridObject(HybridCompressorSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridCompressorSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridCompressorSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridCompressorSpec_cxx _swiftPart;
+    Addons::HybridCompressorSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

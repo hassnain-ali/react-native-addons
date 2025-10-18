@@ -10,7 +10,22 @@
 #import "Addons-Swift-Cxx-Umbrella.hpp"
 #import <type_traits>
 
-#include "HybridAddonsSpecSwift.hpp"
+#include "HybridAppRatingSpecSwift.hpp"
+#include "HybridClipboardSpecSwift.hpp"
+#include "HybridCompressorSpecSwift.hpp"
+#include "HybridContactsSpecSwift.hpp"
+#include "HybridDeviceInfoSpecSwift.hpp"
+#include "HybridDocumentsSpecSwift.hpp"
+#include "HybridFileSystemSpecSwift.hpp"
+#include "HybridGeoLocationSpecSwift.hpp"
+#include "HybridLocalizeSpecSwift.hpp"
+#include "HybridMimeSpecSwift.hpp"
+#include "HybridPermissionsSpecSwift.hpp"
+#include "HybridScreenshotSpecSwift.hpp"
+#include "HybridSoundPlayerSpecSwift.hpp"
+#include "HybridSoundRecorderSpecSwift.hpp"
+#include "HybridUuidSpecSwift.hpp"
+#include "HybridVolumeSpecSwift.hpp"
 
 @interface AddonsAutolinking : NSObject
 @end
@@ -22,9 +37,114 @@
   using namespace margelo::nitro::addons;
 
   HybridObjectRegistry::registerHybridObjectConstructor(
-    "Addons",
+    "AppRating",
     []() -> std::shared_ptr<HybridObject> {
-      std::shared_ptr<HybridAddonsSpec> hybridObject = Addons::AddonsAutolinking::createAddons();
+      std::shared_ptr<HybridAppRatingSpec> hybridObject = Addons::AddonsAutolinking::createAppRating();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Clipboard",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridClipboardSpec> hybridObject = Addons::AddonsAutolinking::createClipboard();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Compressor",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridCompressorSpec> hybridObject = Addons::AddonsAutolinking::createCompressor();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Contacts",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridContactsSpec> hybridObject = Addons::AddonsAutolinking::createContacts();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "DeviceInfo",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridDeviceInfoSpec> hybridObject = Addons::AddonsAutolinking::createDeviceInfo();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Documents",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridDocumentsSpec> hybridObject = Addons::AddonsAutolinking::createDocuments();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "FileSystem",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridFileSystemSpec> hybridObject = Addons::AddonsAutolinking::createFileSystem();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "GeoLocation",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridGeoLocationSpec> hybridObject = Addons::AddonsAutolinking::createGeoLocation();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Localize",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridLocalizeSpec> hybridObject = Addons::AddonsAutolinking::createLocalize();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Mime",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridMimeSpec> hybridObject = Addons::AddonsAutolinking::createMime();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Permissions",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridPermissionsSpec> hybridObject = Addons::AddonsAutolinking::createPermissions();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Screenshot",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridScreenshotSpec> hybridObject = Addons::AddonsAutolinking::createScreenshot();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "SoundPlayer",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridSoundPlayerSpec> hybridObject = Addons::AddonsAutolinking::createSoundPlayer();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "SoundRecorder",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridSoundRecorderSpec> hybridObject = Addons::AddonsAutolinking::createSoundRecorder();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Uuid",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridUuidSpec> hybridObject = Addons::AddonsAutolinking::createUuid();
+      return hybridObject;
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "Volume",
+    []() -> std::shared_ptr<HybridObject> {
+      std::shared_ptr<HybridVolumeSpec> hybridObject = Addons::AddonsAutolinking::createVolume();
       return hybridObject;
     }
   );

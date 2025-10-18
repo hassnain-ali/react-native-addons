@@ -10,13 +10,13 @@
 #include "HybridLocalizeSpec.hpp"
 
 // Forward declaration of `HybridLocalizeSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridLocalizeSpec_cxx; }
+namespace Addons { class HybridLocalizeSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridLocalizeSpecSwift: public virtual HybridLocalizeSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridLocalizeSpecSwift(const NitroAddons::HybridLocalizeSpec_cxx& swiftPart):
+    explicit HybridLocalizeSpecSwift(const Addons::HybridLocalizeSpec_cxx& swiftPart):
       HybridObject(HybridLocalizeSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridLocalizeSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridLocalizeSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridLocalizeSpec_cxx _swiftPart;
+    Addons::HybridLocalizeSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

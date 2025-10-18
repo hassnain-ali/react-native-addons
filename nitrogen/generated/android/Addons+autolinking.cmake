@@ -33,9 +33,39 @@ target_sources(
   # Autolinking Setup
   ../nitrogen/generated/android/AddonsOnLoad.cpp
   # Shared Nitrogen C++ sources
-  ../nitrogen/generated/shared/c++/HybridAddonsSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridAppRatingSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridClipboardSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridCompressorSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridContactsSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridDeviceInfoSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridDocumentsSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridFileSystemSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridGeoLocationSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridLocalizeSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridMimeSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridPermissionsSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridScreenshotSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridSoundPlayerSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridSoundRecorderSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridUuidSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridVolumeSpec.cpp
   # Android-specific Nitrogen C++ sources
-  ../nitrogen/generated/android/c++/JHybridAddonsSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridAppRatingSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridClipboardSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridCompressorSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridContactsSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridDeviceInfoSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridDocumentsSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridFileSystemSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridGeoLocationSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridLocalizeSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridMimeSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridPermissionsSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridScreenshotSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridSoundPlayerSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridSoundRecorderSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridUuidSpec.cpp
+  ../nitrogen/generated/android/c++/JHybridVolumeSpec.cpp
 )
 
 # From node_modules/react-native/ReactAndroid/cmake-utils/folly-flags.cmake

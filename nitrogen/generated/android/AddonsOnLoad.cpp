@@ -15,7 +15,23 @@
 #include <fbjni/fbjni.h>
 #include <NitroModules/HybridObjectRegistry.hpp>
 
-#include "JHybridAddonsSpec.hpp"
+#include "JHybridAppRatingSpec.hpp"
+#include "JHybridClipboardSpec.hpp"
+#include "JFunc_void.hpp"
+#include "JHybridCompressorSpec.hpp"
+#include "JHybridContactsSpec.hpp"
+#include "JHybridDeviceInfoSpec.hpp"
+#include "JHybridDocumentsSpec.hpp"
+#include "JHybridFileSystemSpec.hpp"
+#include "JHybridGeoLocationSpec.hpp"
+#include "JHybridLocalizeSpec.hpp"
+#include "JHybridMimeSpec.hpp"
+#include "JHybridPermissionsSpec.hpp"
+#include "JHybridScreenshotSpec.hpp"
+#include "JHybridSoundPlayerSpec.hpp"
+#include "JHybridSoundRecorderSpec.hpp"
+#include "JHybridUuidSpec.hpp"
+#include "JHybridVolumeSpec.hpp"
 #include <NitroModules/DefaultConstructableObject.hpp>
 
 namespace margelo::nitro::addons {
@@ -27,13 +43,149 @@ int initialize(JavaVM* vm) {
 
   return facebook::jni::initialize(vm, [] {
     // Register native JNI methods
-    margelo::nitro::addons::JHybridAddonsSpec::registerNatives();
+    margelo::nitro::addons::JHybridAppRatingSpec::registerNatives();
+    margelo::nitro::addons::JHybridClipboardSpec::registerNatives();
+    margelo::nitro::addons::JFunc_void_cxx::registerNatives();
+    margelo::nitro::addons::JHybridCompressorSpec::registerNatives();
+    margelo::nitro::addons::JHybridContactsSpec::registerNatives();
+    margelo::nitro::addons::JHybridDeviceInfoSpec::registerNatives();
+    margelo::nitro::addons::JHybridDocumentsSpec::registerNatives();
+    margelo::nitro::addons::JHybridFileSystemSpec::registerNatives();
+    margelo::nitro::addons::JHybridGeoLocationSpec::registerNatives();
+    margelo::nitro::addons::JHybridLocalizeSpec::registerNatives();
+    margelo::nitro::addons::JHybridMimeSpec::registerNatives();
+    margelo::nitro::addons::JHybridPermissionsSpec::registerNatives();
+    margelo::nitro::addons::JHybridScreenshotSpec::registerNatives();
+    margelo::nitro::addons::JHybridSoundPlayerSpec::registerNatives();
+    margelo::nitro::addons::JHybridSoundRecorderSpec::registerNatives();
+    margelo::nitro::addons::JHybridUuidSpec::registerNatives();
+    margelo::nitro::addons::JHybridVolumeSpec::registerNatives();
 
     // Register Nitro Hybrid Objects
     HybridObjectRegistry::registerHybridObjectConstructor(
-      "Addons",
+      "AppRating",
       []() -> std::shared_ptr<HybridObject> {
-        static DefaultConstructableObject<JHybridAddonsSpec::javaobject> object("com/addons/HybridAddons");
+        static DefaultConstructableObject<JHybridAppRatingSpec::javaobject> object("com/margelo/nitro/addons/HybridAppRating");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Clipboard",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridClipboardSpec::javaobject> object("com/margelo/nitro/addons/HybridClipboard");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Compressor",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridCompressorSpec::javaobject> object("com/margelo/nitro/addons/HybridCompressor");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Contacts",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridContactsSpec::javaobject> object("com/margelo/nitro/addons/HybridContacts");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "DeviceInfo",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridDeviceInfoSpec::javaobject> object("com/margelo/nitro/addons/HybridDeviceInfo");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Documents",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridDocumentsSpec::javaobject> object("com/margelo/nitro/addons/HybridDocuments");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "FileSystem",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridFileSystemSpec::javaobject> object("com/margelo/nitro/addons/HybridFileSystem");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "GeoLocation",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridGeoLocationSpec::javaobject> object("com/margelo/nitro/addons/HybridGeoLocation");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Localize",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridLocalizeSpec::javaobject> object("com/margelo/nitro/addons/HybridLocalize");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Mime",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridMimeSpec::javaobject> object("com/margelo/nitro/addons/HybridMime");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Permissions",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridPermissionsSpec::javaobject> object("com/margelo/nitro/addons/HybridPermissions");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Screenshot",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridScreenshotSpec::javaobject> object("com/margelo/nitro/addons/HybridScreenshot");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "SoundPlayer",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridSoundPlayerSpec::javaobject> object("com/margelo/nitro/addons/HybridSoundPlayer");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "SoundRecorder",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridSoundRecorderSpec::javaobject> object("com/margelo/nitro/addons/HybridSoundRecorder");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Uuid",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridUuidSpec::javaobject> object("com/margelo/nitro/addons/HybridUuid");
+        auto instance = object.create();
+        return instance->cthis()->shared();
+      }
+    );
+    HybridObjectRegistry::registerHybridObjectConstructor(
+      "Volume",
+      []() -> std::shared_ptr<HybridObject> {
+        static DefaultConstructableObject<JHybridVolumeSpec::javaobject> object("com/margelo/nitro/addons/HybridVolume");
         auto instance = object.create();
         return instance->cthis()->shared();
       }

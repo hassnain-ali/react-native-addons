@@ -10,13 +10,13 @@
 #include "HybridGeoLocationSpec.hpp"
 
 // Forward declaration of `HybridGeoLocationSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridGeoLocationSpec_cxx; }
+namespace Addons { class HybridGeoLocationSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridGeoLocationSpecSwift: public virtual HybridGeoLocationSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridGeoLocationSpecSwift(const NitroAddons::HybridGeoLocationSpec_cxx& swiftPart):
+    explicit HybridGeoLocationSpecSwift(const Addons::HybridGeoLocationSpec_cxx& swiftPart):
       HybridObject(HybridGeoLocationSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridGeoLocationSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridGeoLocationSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridGeoLocationSpec_cxx _swiftPart;
+    Addons::HybridGeoLocationSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

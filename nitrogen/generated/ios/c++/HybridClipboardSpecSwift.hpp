@@ -10,7 +10,7 @@
 #include "HybridClipboardSpec.hpp"
 
 // Forward declaration of `HybridClipboardSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridClipboardSpec_cxx; }
+namespace Addons { class HybridClipboardSpec_cxx; }
 
 
 
@@ -20,7 +20,7 @@ namespace NitroAddons { class HybridClipboardSpec_cxx; }
 #include <optional>
 #include <functional>
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -37,13 +37,13 @@ namespace margelo::nitro::addons {
   class HybridClipboardSpecSwift: public virtual HybridClipboardSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridClipboardSpecSwift(const NitroAddons::HybridClipboardSpec_cxx& swiftPart):
+    explicit HybridClipboardSpecSwift(const Addons::HybridClipboardSpec_cxx& swiftPart):
       HybridObject(HybridClipboardSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridClipboardSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridClipboardSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -173,7 +173,7 @@ namespace margelo::nitro::addons {
     }
 
   private:
-    NitroAddons::HybridClipboardSpec_cxx _swiftPart;
+    Addons::HybridClipboardSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

@@ -10,13 +10,13 @@
 #include "HybridUuidSpec.hpp"
 
 // Forward declaration of `HybridUuidSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridUuidSpec_cxx; }
+namespace Addons { class HybridUuidSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridUuidSpecSwift: public virtual HybridUuidSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridUuidSpecSwift(const NitroAddons::HybridUuidSpec_cxx& swiftPart):
+    explicit HybridUuidSpecSwift(const Addons::HybridUuidSpec_cxx& swiftPart):
       HybridObject(HybridUuidSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridUuidSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridUuidSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridUuidSpec_cxx _swiftPart;
+    Addons::HybridUuidSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

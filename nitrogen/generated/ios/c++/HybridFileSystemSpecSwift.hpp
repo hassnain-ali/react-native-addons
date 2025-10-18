@@ -10,13 +10,13 @@
 #include "HybridFileSystemSpec.hpp"
 
 // Forward declaration of `HybridFileSystemSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridFileSystemSpec_cxx; }
+namespace Addons { class HybridFileSystemSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridFileSystemSpecSwift: public virtual HybridFileSystemSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridFileSystemSpecSwift(const NitroAddons::HybridFileSystemSpec_cxx& swiftPart):
+    explicit HybridFileSystemSpecSwift(const Addons::HybridFileSystemSpec_cxx& swiftPart):
       HybridObject(HybridFileSystemSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridFileSystemSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridFileSystemSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridFileSystemSpec_cxx _swiftPart;
+    Addons::HybridFileSystemSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

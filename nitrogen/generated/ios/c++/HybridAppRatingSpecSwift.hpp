@@ -10,13 +10,13 @@
 #include "HybridAppRatingSpec.hpp"
 
 // Forward declaration of `HybridAppRatingSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridAppRatingSpec_cxx; }
+namespace Addons { class HybridAppRatingSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridAppRatingSpecSwift: public virtual HybridAppRatingSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridAppRatingSpecSwift(const NitroAddons::HybridAppRatingSpec_cxx& swiftPart):
+    explicit HybridAppRatingSpecSwift(const Addons::HybridAppRatingSpec_cxx& swiftPart):
       HybridObject(HybridAppRatingSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridAppRatingSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridAppRatingSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridAppRatingSpec_cxx _swiftPart;
+    Addons::HybridAppRatingSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

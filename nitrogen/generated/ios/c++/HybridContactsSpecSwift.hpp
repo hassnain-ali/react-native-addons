@@ -10,13 +10,13 @@
 #include "HybridContactsSpec.hpp"
 
 // Forward declaration of `HybridContactsSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridContactsSpec_cxx; }
+namespace Addons { class HybridContactsSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridContactsSpecSwift: public virtual HybridContactsSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridContactsSpecSwift(const NitroAddons::HybridContactsSpec_cxx& swiftPart):
+    explicit HybridContactsSpecSwift(const Addons::HybridContactsSpec_cxx& swiftPart):
       HybridObject(HybridContactsSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridContactsSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridContactsSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridContactsSpec_cxx _swiftPart;
+    Addons::HybridContactsSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

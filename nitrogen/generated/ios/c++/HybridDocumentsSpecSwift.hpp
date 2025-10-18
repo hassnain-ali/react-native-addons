@@ -10,13 +10,13 @@
 #include "HybridDocumentsSpec.hpp"
 
 // Forward declaration of `HybridDocumentsSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridDocumentsSpec_cxx; }
+namespace Addons { class HybridDocumentsSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridDocumentsSpecSwift: public virtual HybridDocumentsSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridDocumentsSpecSwift(const NitroAddons::HybridDocumentsSpec_cxx& swiftPart):
+    explicit HybridDocumentsSpecSwift(const Addons::HybridDocumentsSpec_cxx& swiftPart):
       HybridObject(HybridDocumentsSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridDocumentsSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridDocumentsSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridDocumentsSpec_cxx _swiftPart;
+    Addons::HybridDocumentsSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

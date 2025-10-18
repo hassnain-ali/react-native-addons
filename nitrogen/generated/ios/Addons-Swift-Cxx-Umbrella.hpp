@@ -8,14 +8,64 @@
 #pragma once
 
 // Forward declarations of C++ defined types
-// Forward declaration of `HybridAddonsSpec` to properly resolve imports.
-namespace margelo::nitro::addons { class HybridAddonsSpec; }
+// Forward declaration of `HybridAppRatingSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridAppRatingSpec; }
+// Forward declaration of `HybridClipboardSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridClipboardSpec; }
+// Forward declaration of `HybridCompressorSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridCompressorSpec; }
+// Forward declaration of `HybridContactsSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridContactsSpec; }
+// Forward declaration of `HybridDeviceInfoSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridDeviceInfoSpec; }
+// Forward declaration of `HybridDocumentsSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridDocumentsSpec; }
+// Forward declaration of `HybridFileSystemSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridFileSystemSpec; }
+// Forward declaration of `HybridGeoLocationSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridGeoLocationSpec; }
+// Forward declaration of `HybridLocalizeSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridLocalizeSpec; }
+// Forward declaration of `HybridMimeSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridMimeSpec; }
+// Forward declaration of `HybridPermissionsSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridPermissionsSpec; }
+// Forward declaration of `HybridScreenshotSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridScreenshotSpec; }
+// Forward declaration of `HybridSoundPlayerSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridSoundPlayerSpec; }
+// Forward declaration of `HybridSoundRecorderSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridSoundRecorderSpec; }
+// Forward declaration of `HybridUuidSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridUuidSpec; }
+// Forward declaration of `HybridVolumeSpec` to properly resolve imports.
+namespace margelo::nitro::addons { class HybridVolumeSpec; }
 
 // Include C++ defined types
-#include "HybridAddonsSpec.hpp"
+#include "HybridAppRatingSpec.hpp"
+#include "HybridClipboardSpec.hpp"
+#include "HybridCompressorSpec.hpp"
+#include "HybridContactsSpec.hpp"
+#include "HybridDeviceInfoSpec.hpp"
+#include "HybridDocumentsSpec.hpp"
+#include "HybridFileSystemSpec.hpp"
+#include "HybridGeoLocationSpec.hpp"
+#include "HybridLocalizeSpec.hpp"
+#include "HybridMimeSpec.hpp"
+#include "HybridPermissionsSpec.hpp"
+#include "HybridScreenshotSpec.hpp"
+#include "HybridSoundPlayerSpec.hpp"
+#include "HybridSoundRecorderSpec.hpp"
+#include "HybridUuidSpec.hpp"
+#include "HybridVolumeSpec.hpp"
+#include <NitroModules/Promise.hpp>
 #include <NitroModules/Result.hpp>
 #include <exception>
+#include <functional>
 #include <memory>
+#include <optional>
+#include <string>
+#include <vector>
 
 // C++ helpers for Swift
 #include "Addons-Swift-Cxx-Bridge.hpp"
@@ -27,8 +77,38 @@ namespace margelo::nitro::addons { class HybridAddonsSpec; }
 #include <NitroModules/DateToChronoDate.hpp>
 
 // Forward declarations of Swift defined types
-// Forward declaration of `HybridAddonsSpec_cxx` to properly resolve imports.
-namespace Addons { class HybridAddonsSpec_cxx; }
+// Forward declaration of `HybridAppRatingSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridAppRatingSpec_cxx; }
+// Forward declaration of `HybridClipboardSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridClipboardSpec_cxx; }
+// Forward declaration of `HybridCompressorSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridCompressorSpec_cxx; }
+// Forward declaration of `HybridContactsSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridContactsSpec_cxx; }
+// Forward declaration of `HybridDeviceInfoSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridDeviceInfoSpec_cxx; }
+// Forward declaration of `HybridDocumentsSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridDocumentsSpec_cxx; }
+// Forward declaration of `HybridFileSystemSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridFileSystemSpec_cxx; }
+// Forward declaration of `HybridGeoLocationSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridGeoLocationSpec_cxx; }
+// Forward declaration of `HybridLocalizeSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridLocalizeSpec_cxx; }
+// Forward declaration of `HybridMimeSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridMimeSpec_cxx; }
+// Forward declaration of `HybridPermissionsSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridPermissionsSpec_cxx; }
+// Forward declaration of `HybridScreenshotSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridScreenshotSpec_cxx; }
+// Forward declaration of `HybridSoundPlayerSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridSoundPlayerSpec_cxx; }
+// Forward declaration of `HybridSoundRecorderSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridSoundRecorderSpec_cxx; }
+// Forward declaration of `HybridUuidSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridUuidSpec_cxx; }
+// Forward declaration of `HybridVolumeSpec_cxx` to properly resolve imports.
+namespace Addons { class HybridVolumeSpec_cxx; }
 
 // Include Swift defined types
 #if __has_include("Addons-Swift.h")

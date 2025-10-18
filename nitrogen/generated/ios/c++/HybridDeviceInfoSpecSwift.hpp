@@ -10,13 +10,13 @@
 #include "HybridDeviceInfoSpec.hpp"
 
 // Forward declaration of `HybridDeviceInfoSpec_cxx` to properly resolve imports.
-namespace NitroAddons { class HybridDeviceInfoSpec_cxx; }
+namespace Addons { class HybridDeviceInfoSpec_cxx; }
 
 
 
 
 
-#include "NitroAddons-Swift-Cxx-Umbrella.hpp"
+#include "Addons-Swift-Cxx-Umbrella.hpp"
 
 namespace margelo::nitro::addons {
 
@@ -33,13 +33,13 @@ namespace margelo::nitro::addons {
   class HybridDeviceInfoSpecSwift: public virtual HybridDeviceInfoSpec {
   public:
     // Constructor from a Swift instance
-    explicit HybridDeviceInfoSpecSwift(const NitroAddons::HybridDeviceInfoSpec_cxx& swiftPart):
+    explicit HybridDeviceInfoSpecSwift(const Addons::HybridDeviceInfoSpec_cxx& swiftPart):
       HybridObject(HybridDeviceInfoSpec::TAG),
       _swiftPart(swiftPart) { }
 
   public:
     // Get the Swift part
-    inline NitroAddons::HybridDeviceInfoSpec_cxx& getSwiftPart() noexcept {
+    inline Addons::HybridDeviceInfoSpec_cxx& getSwiftPart() noexcept {
       return _swiftPart;
     }
 
@@ -60,7 +60,7 @@ namespace margelo::nitro::addons {
     
 
   private:
-    NitroAddons::HybridDeviceInfoSpec_cxx _swiftPart;
+    Addons::HybridDeviceInfoSpec_cxx _swiftPart;
   };
 
 } // namespace margelo::nitro::addons

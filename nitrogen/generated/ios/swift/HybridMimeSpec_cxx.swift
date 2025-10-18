@@ -20,7 +20,7 @@ import NitroModules
 open class HybridMimeSpec_cxx {
   /**
    * The Swift <> C++ bridge's namespace (`margelo::nitro::addons::bridge::swift`)
-   * from `NitroAddons-Swift-Cxx-Bridge.hpp`.
+   * from `Addons-Swift-Cxx-Bridge.hpp`.
    * This contains specialized C++ templates, and C++ helper functions that can be accessed from Swift.
    */
   public typealias bridge = margelo.nitro.addons.bridge.swift
