@@ -1,8 +1,8 @@
 //
 //  Bridge.h
-//  NitroAddons
+//  addons
 //
-//  Created by Marc Rousavy on 22.07.24.
+//  Created by Hassnain Ali on 10/19/2025
 //
 
 #pragma once

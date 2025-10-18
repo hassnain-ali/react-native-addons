@@ -1,78 +1,24 @@
 {
   "$schema": "https://nitro.margelo.com/nitro.schema.json",
-  "cxxNamespace": ["addons"],
+  "cxxNamespace": [
+    "addons"
+  ],
   "ios": {
-    "iosModuleName": "NitroAddons"
+    "iosModuleName": "Addons"
   },
   "android": {
-    "androidNamespace": ["addons"],
-    "androidCxxLibName": "NitroAddons"
+    "androidNamespace": [
+      "addons"
+    ],
+    "androidCxxLibName": "Addons"
   },
   "autolinking": {
-    "AppRating": {
-      "kotlin": "HybridAppRating",
-      "swift": "HybridAppRating"
-    },
-    "Clipboard": {
-      "kotlin": "HybridClipboard",
-      "swift": "HybridClipboard"
-    },
-    "Compressor": {
-      "kotlin": "HybridCompressor",
-      "swift": "HybridCompressor"
-    },
-    "Contacts": {
-      "kotlin": "HybridContacts",
-      "swift": "HybridContacts"
-    },
-    "DeviceInfo": {
-      "kotlin": "HybridDeviceInfo",
-      "swift": "HybridDeviceInfo"
-    },
-    "Documents": {
-      "kotlin": "HybridDocuments",
-      "swift": "HybridDocuments"
-    },
-    "FileSystem": {
-      "kotlin": "HybridFileSystem",
-      "swift": "HybridFileSystem"
-    },
-    "GeoLocation": {
-      "kotlin": "HybridGeoLocation",
-      "swift": "HybridGeoLocation"
-    },
-    "Localize": {
-      "kotlin": "HybridLocalize",
-      "swift": "HybridLocalize"
-    },
-    "Mime": {
-      "kotlin": "HybridMime",
-      "swift": "HybridMime"
-    },
-    "Permissions": {
-      "kotlin": "HybridPermissions",
-      "swift": "HybridPermissions"
-    },
-    "Screenshot": {
-      "kotlin": "HybridScreenshot",
-      "swift": "HybridScreenshot"
-    },
-    "SoundPlayer": {
-      "kotlin": "HybridSoundPlayer",
-      "swift": "HybridSoundPlayer"
-    },
-    "SoundRecorder": {
-      "kotlin": "HybridSoundRecorder",
-      "swift": "HybridSoundRecorder"
-    },
-    "Uuid": {
-      "kotlin": "HybridUuid",
-      "swift": "HybridUuid"
-    },
-    "Volume": {
-      "kotlin": "HybridVolume",
-      "swift": "HybridVolume"
+    "Addons": {
+      "swift": "HybridAddons",
+      "kotlin": "HybridAddons"
     }
   },
-  "ignorePaths": ["**/node_modules"]
+  "ignorePaths": [
+    "**/node_modules"
+  ]
 }
