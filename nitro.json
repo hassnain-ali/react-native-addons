@@ -1,0 +1,78 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": ["addons"],
+  "ios": {
+    "iosModuleName": "NitroAddons"
+  },
+  "android": {
+    "androidNamespace": ["addons"],
+    "androidCxxLibName": "NitroAddons"
+  },
+  "autolinking": {
+    "AppRating": {
+      "kotlin": "HybridAppRating",
+      "swift": "HybridAppRating"
+    },
+    "Clipboard": {
+      "kotlin": "HybridClipboard",
+      "swift": "HybridClipboard"
+    },
+    "Compressor": {
+      "kotlin": "HybridCompressor",
+      "swift": "HybridCompressor"
+    },
+    "Contacts": {
+      "kotlin": "HybridContacts",
+      "swift": "HybridContacts"
+    },
+    "DeviceInfo": {
+      "kotlin": "HybridDeviceInfo",
+      "swift": "HybridDeviceInfo"
+    },
+    "Documents": {
+      "kotlin": "HybridDocuments",
+      "swift": "HybridDocuments"
+    },
+    "FileSystem": {
+      "kotlin": "HybridFileSystem",
+      "swift": "HybridFileSystem"
+    },
+    "GeoLocation": {
+      "kotlin": "HybridGeoLocation",
+      "swift": "HybridGeoLocation"
+    },
+    "Localize": {
+      "kotlin": "HybridLocalize",
+      "swift": "HybridLocalize"
+    },
+    "Mime": {
+      "kotlin": "HybridMime",
+      "swift": "HybridMime"
+    },
+    "Permissions": {
+      "kotlin": "HybridPermissions",
+      "swift": "HybridPermissions"
+    },
+    "Screenshot": {
+      "kotlin": "HybridScreenshot",
+      "swift": "HybridScreenshot"
+    },
+    "SoundPlayer": {
+      "kotlin": "HybridSoundPlayer",
+      "swift": "HybridSoundPlayer"
+    },
+    "SoundRecorder": {
+      "kotlin": "HybridSoundRecorder",
+      "swift": "HybridSoundRecorder"
+    },
+    "Uuid": {
+      "kotlin": "HybridUuid",
+      "swift": "HybridUuid"
+    },
+    "Volume": {
+      "kotlin": "HybridVolume",
+      "swift": "HybridVolume"
+    }
+  },
+  "ignorePaths": ["**/node_modules"]
+}
