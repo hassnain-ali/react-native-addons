@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridContacts {
+import com.margelo.nitro.addons.HybridContactsSpec
+
+class HybridContacts: HybridContactsSpec() {
 }

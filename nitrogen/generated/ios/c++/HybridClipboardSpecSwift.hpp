@@ -15,9 +15,7 @@ namespace Addons { class HybridClipboardSpec_cxx; }
 
 
 #include <string>
-#include <NitroModules/Promise.hpp>
 #include <vector>
-#include <optional>
 #include <functional>
 
 #include "Addons-Swift-Cxx-Umbrella.hpp"
@@ -61,7 +59,7 @@ namespace margelo::nitro::addons {
 
   public:
     // Methods
-    inline std::shared_ptr<Promise<std::string>> getString() override {
+    inline std::string getString() override {
       auto __result = _swiftPart.getString();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -69,7 +67,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::shared_ptr<Promise<std::vector<std::string>>> getStrings() override {
+    inline std::vector<std::string> getStrings() override {
       auto __result = _swiftPart.getStrings();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -77,7 +75,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::shared_ptr<Promise<std::string>> getImagePNG() override {
+    inline std::string getImagePNG() override {
       auto __result = _swiftPart.getImagePNG();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -85,7 +83,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::shared_ptr<Promise<std::string>> getImageJPG() override {
+    inline std::string getImageJPG() override {
       auto __result = _swiftPart.getImageJPG();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -99,7 +97,7 @@ namespace margelo::nitro::addons {
         std::rethrow_exception(__result.error());
       }
     }
-    inline std::shared_ptr<Promise<std::string>> getImage() override {
+    inline std::string getImage() override {
       auto __result = _swiftPart.getImage();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -119,7 +117,7 @@ namespace margelo::nitro::addons {
         std::rethrow_exception(__result.error());
       }
     }
-    inline std::shared_ptr<Promise<bool>> hasString() override {
+    inline bool hasString() override {
       auto __result = _swiftPart.hasString();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -127,7 +125,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::shared_ptr<Promise<bool>> hasImage() override {
+    inline bool hasImage() override {
       auto __result = _swiftPart.hasImage();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -135,7 +133,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::optional<std::shared_ptr<Promise<bool>>> hasURL() override {
+    inline bool hasURL() override {
       auto __result = _swiftPart.hasURL();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -143,7 +141,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::optional<std::shared_ptr<Promise<bool>>> hasNumber() override {
+    inline bool hasNumber() override {
       auto __result = _swiftPart.hasNumber();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());
@@ -151,7 +149,7 @@ namespace margelo::nitro::addons {
       auto __value = std::move(__result.value());
       return __value;
     }
-    inline std::optional<std::shared_ptr<Promise<bool>>> hasWebURL() override {
+    inline bool hasWebURL() override {
       auto __result = _swiftPart.hasWebURL();
       if (__result.hasError()) [[unlikely]] {
         std::rethrow_exception(__result.error());

@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridPermissions {
+import com.margelo.nitro.addons.HybridPermissionsSpec
+
+class HybridPermissions: HybridPermissionsSpec() {
 }

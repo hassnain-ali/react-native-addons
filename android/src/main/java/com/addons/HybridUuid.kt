@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridUuid {
+import com.margelo.nitro.addons.HybridUuidSpec
+
+class HybridUuid: HybridUuidSpec() {
 }

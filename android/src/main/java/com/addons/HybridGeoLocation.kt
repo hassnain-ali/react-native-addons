@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridGeoLocation {
+import com.margelo.nitro.addons.HybridGeoLocationSpec
+
+class HybridGeoLocation: HybridGeoLocationSpec() {
 }

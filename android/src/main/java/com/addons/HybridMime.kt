@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridMime {
+import com.margelo.nitro.addons.HybridMimeSpec
+
+class HybridMime: HybridMimeSpec() {
 }

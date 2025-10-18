@@ -16,9 +16,7 @@
 
 
 #include <string>
-#include <NitroModules/Promise.hpp>
 #include <vector>
-#include <optional>
 #include <functional>
 
 namespace margelo::nitro::addons {
@@ -52,19 +50,19 @@ namespace margelo::nitro::addons {
 
     public:
       // Methods
-      virtual std::shared_ptr<Promise<std::string>> getString() = 0;
-      virtual std::shared_ptr<Promise<std::vector<std::string>>> getStrings() = 0;
-      virtual std::shared_ptr<Promise<std::string>> getImagePNG() = 0;
-      virtual std::shared_ptr<Promise<std::string>> getImageJPG() = 0;
+      virtual std::string getString() = 0;
+      virtual std::vector<std::string> getStrings() = 0;
+      virtual std::string getImagePNG() = 0;
+      virtual std::string getImageJPG() = 0;
       virtual void setImage(const std::string& content) = 0;
-      virtual std::shared_ptr<Promise<std::string>> getImage() = 0;
+      virtual std::string getImage() = 0;
       virtual void setString(const std::string& content) = 0;
       virtual void setStrings(const std::vector<std::string>& content) = 0;
-      virtual std::shared_ptr<Promise<bool>> hasString() = 0;
-      virtual std::shared_ptr<Promise<bool>> hasImage() = 0;
-      virtual std::optional<std::shared_ptr<Promise<bool>>> hasURL() = 0;
-      virtual std::optional<std::shared_ptr<Promise<bool>>> hasNumber() = 0;
-      virtual std::optional<std::shared_ptr<Promise<bool>>> hasWebURL() = 0;
+      virtual bool hasString() = 0;
+      virtual bool hasImage() = 0;
+      virtual bool hasURL() = 0;
+      virtual bool hasNumber() = 0;
+      virtual bool hasWebURL() = 0;
       virtual void onClipboardChanged(const std::function<void()>& callback) = 0;
       virtual void removeAllListeners() = 0;
 

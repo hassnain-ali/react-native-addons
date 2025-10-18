@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridLocalize {
+import com.margelo.nitro.addons.HybridLocalizeSpec
+
+class HybridLocalize: HybridLocalizeSpec() {
 }

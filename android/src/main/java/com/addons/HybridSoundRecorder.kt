@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridSoundRecorder {
+import com.margelo.nitro.addons.HybridSoundRecorderSpec
+
+class HybridSoundRecorder: HybridSoundRecorderSpec() {
 }

@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridAppRating {
+import com.margelo.nitro.addons.HybridAppRatingSpec
+
+class HybridAppRating : HybridAppRatingSpec() {
 }

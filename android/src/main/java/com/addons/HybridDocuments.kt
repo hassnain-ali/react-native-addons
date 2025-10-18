@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridDocuments {
+import com.margelo.nitro.addons.HybridDocumentsSpec
+
+class HybridDocuments: HybridDocumentsSpec() {
 }

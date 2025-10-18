@@ -10,7 +10,7 @@ export interface Clipboard
    * }
    * ```
    */
-  getString(): Promise<string>
+  getString(): string
   /**
    * (iOS Only)
    * Get contents of string array type, this method returns a `Promise`, so you can use following code to get clipboard content
@@ -20,7 +20,7 @@ export interface Clipboard
    * }
    * ```
    */
-  getStrings(): Promise<string[]>
+  getStrings(): string[]
   /**
    * Get clipboard image as PNG in base64, this method returns a `Promise`, so you can use following code to get clipboard content
    * ```javascript
@@ -29,7 +29,7 @@ export interface Clipboard
    * }
    * ```
    */
-  getImagePNG(): Promise<string>
+  getImagePNG(): string
   /**
    * Get clipboard image as JPG in base64, this method returns a `Promise`, so you can use following code to get clipboard content
    * ```javascript
@@ -38,7 +38,7 @@ export interface Clipboard
    * }
    * ```
    */
-  getImageJPG(): Promise<string>
+  getImageJPG(): string
   /**
    * (iOS Only)
    * Set content of base64 image type. You can use following code to set clipboard content
@@ -59,7 +59,7 @@ export interface Clipboard
    * }
    * ```
    */
-  getImage(): Promise<string>
+  getImage(): string
   /**
    * Set content of string type. You can use following code to set clipboard content
    * ```javascript
@@ -89,7 +89,7 @@ export interface Clipboard
    * }
    * ```
    */
-  hasString(): Promise<boolean>
+  hasString(): boolean
   /**
    * Returns whether the clipboard has an image or is empty.
    * This method returns a `Promise`, so you can use following code to check clipboard content
@@ -99,7 +99,7 @@ export interface Clipboard
    * }
    * ```
    */
-  hasImage(): Promise<boolean>
+  hasImage(): boolean
   /**
    * (iOS Only)
    * Returns whether the clipboard has a URL content. Can check
@@ -111,7 +111,7 @@ export interface Clipboard
    * }
    * ```
    */
-  hasURL(): Promise<boolean> | undefined
+  hasURL(): boolean
   /**
    * (iOS 14+ Only)
    * Returns whether the clipboard has a Number(UIPasteboardDetectionPatternNumber) content. Can check
@@ -123,7 +123,7 @@ export interface Clipboard
    * }
    * ```
    */
-  hasNumber(): Promise<boolean> | undefined
+  hasNumber(): boolean
   /**
    * (iOS 14+ Only)
    * Returns whether the clipboard has a WebURL(UIPasteboardDetectionPatternProbableWebURL) content. Can check
@@ -135,7 +135,7 @@ export interface Clipboard
    * }
    * ```
    */
-  hasWebURL(): Promise<boolean> | undefined
+  hasWebURL(): boolean
   /**
    * (iOS and Android Only)
    * Adds a listener to get notifications when the clipboard has changed.

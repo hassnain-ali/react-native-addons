@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridScreenshot {
+import com.margelo.nitro.addons.HybridScreenshotSpec
+
+class HybridScreenshot: HybridScreenshotSpec() {
 }

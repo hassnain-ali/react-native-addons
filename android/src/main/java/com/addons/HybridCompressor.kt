@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridCompressor {
+import com.margelo.nitro.addons.HybridCompressorSpec
+
+class HybridCompressor: HybridCompressorSpec() {
 }

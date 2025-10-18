@@ -42,19 +42,19 @@ abstract class HybridClipboardSpec: HybridObject() {
   // Methods
   @DoNotStrip
   @Keep
-  abstract fun getString(): Promise<String>
+  abstract fun getString(): String
   
   @DoNotStrip
   @Keep
-  abstract fun getStrings(): Promise<Array<String>>
+  abstract fun getStrings(): Array<String>
   
   @DoNotStrip
   @Keep
-  abstract fun getImagePNG(): Promise<String>
+  abstract fun getImagePNG(): String
   
   @DoNotStrip
   @Keep
-  abstract fun getImageJPG(): Promise<String>
+  abstract fun getImageJPG(): String
   
   @DoNotStrip
   @Keep
@@ -62,7 +62,7 @@ abstract class HybridClipboardSpec: HybridObject() {
   
   @DoNotStrip
   @Keep
-  abstract fun getImage(): Promise<String>
+  abstract fun getImage(): String
   
   @DoNotStrip
   @Keep
@@ -74,23 +74,23 @@ abstract class HybridClipboardSpec: HybridObject() {
   
   @DoNotStrip
   @Keep
-  abstract fun hasString(): Promise<Boolean>
+  abstract fun hasString(): Boolean
   
   @DoNotStrip
   @Keep
-  abstract fun hasImage(): Promise<Boolean>
+  abstract fun hasImage(): Boolean
   
   @DoNotStrip
   @Keep
-  abstract fun hasURL(): Promise<Boolean>?
+  abstract fun hasURL(): Boolean
   
   @DoNotStrip
   @Keep
-  abstract fun hasNumber(): Promise<Boolean>?
+  abstract fun hasNumber(): Boolean
   
   @DoNotStrip
   @Keep
-  abstract fun hasWebURL(): Promise<Boolean>?
+  abstract fun hasWebURL(): Boolean
   
   abstract fun onClipboardChanged(callback: () -> Unit): Unit
   

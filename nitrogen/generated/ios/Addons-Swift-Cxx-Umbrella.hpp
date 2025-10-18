@@ -58,12 +58,10 @@ namespace margelo::nitro::addons { class HybridVolumeSpec; }
 #include "HybridSoundRecorderSpec.hpp"
 #include "HybridUuidSpec.hpp"
 #include "HybridVolumeSpec.hpp"
-#include <NitroModules/Promise.hpp>
 #include <NitroModules/Result.hpp>
 #include <exception>
 #include <functional>
 #include <memory>
-#include <optional>
 #include <string>
 #include <vector>
 

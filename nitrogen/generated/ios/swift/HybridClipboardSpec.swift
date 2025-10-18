@@ -14,19 +14,19 @@ public protocol HybridClipboardSpec_protocol: HybridObject {
   
 
   // Methods
-  func getString() throws -> Promise<String>
-  func getStrings() throws -> Promise<[String]>
-  func getImagePNG() throws -> Promise<String>
-  func getImageJPG() throws -> Promise<String>
+  func getString() throws -> String
+  func getStrings() throws -> [String]
+  func getImagePNG() throws -> String
+  func getImageJPG() throws -> String
   func setImage(content: String) throws -> Void
-  func getImage() throws -> Promise<String>
+  func getImage() throws -> String
   func setString(content: String) throws -> Void
   func setStrings(content: [String]) throws -> Void
-  func hasString() throws -> Promise<Bool>
-  func hasImage() throws -> Promise<Bool>
-  func hasURL() throws -> Promise<Bool>?
-  func hasNumber() throws -> Promise<Bool>?
-  func hasWebURL() throws -> Promise<Bool>?
+  func hasString() throws -> Bool
+  func hasImage() throws -> Bool
+  func hasURL() throws -> Bool
+  func hasNumber() throws -> Bool
+  func hasWebURL() throws -> Bool
   func onClipboardChanged(callback: @escaping () -> Void) throws -> Void
   func removeAllListeners() throws -> Void
 }

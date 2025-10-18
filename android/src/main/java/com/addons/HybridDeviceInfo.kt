@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridDeviceInfo {
+import com.margelo.nitro.addons.HybridDeviceInfoSpec
+
+class HybridDeviceInfo: HybridDeviceInfoSpec() {
 }

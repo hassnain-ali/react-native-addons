@@ -53,19 +53,19 @@ namespace margelo::nitro::addons {
 
   public:
     // Methods
-    std::shared_ptr<Promise<std::string>> getString() override;
-    std::shared_ptr<Promise<std::vector<std::string>>> getStrings() override;
-    std::shared_ptr<Promise<std::string>> getImagePNG() override;
-    std::shared_ptr<Promise<std::string>> getImageJPG() override;
+    std::string getString() override;
+    std::vector<std::string> getStrings() override;
+    std::string getImagePNG() override;
+    std::string getImageJPG() override;
     void setImage(const std::string& content) override;
-    std::shared_ptr<Promise<std::string>> getImage() override;
+    std::string getImage() override;
     void setString(const std::string& content) override;
     void setStrings(const std::vector<std::string>& content) override;
-    std::shared_ptr<Promise<bool>> hasString() override;
-    std::shared_ptr<Promise<bool>> hasImage() override;
-    std::optional<std::shared_ptr<Promise<bool>>> hasURL() override;
-    std::optional<std::shared_ptr<Promise<bool>>> hasNumber() override;
-    std::optional<std::shared_ptr<Promise<bool>>> hasWebURL() override;
+    bool hasString() override;
+    bool hasImage() override;
+    bool hasURL() override;
+    bool hasNumber() override;
+    bool hasWebURL() override;
     void onClipboardChanged(const std::function<void()>& callback) override;
     void removeAllListeners() override;
 

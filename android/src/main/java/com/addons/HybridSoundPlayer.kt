@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridSoundPlayer {
+import com.margelo.nitro.addons.HybridSoundPlayerSpec
+
+class HybridSoundPlayer: HybridSoundPlayerSpec() {
 }

@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridFileSystem {
+import com.margelo.nitro.addons.HybridFileSystemSpec
+
+class HybridFileSystem: HybridFileSystemSpec() {
 }

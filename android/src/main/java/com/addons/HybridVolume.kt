@@ -1,4 +1,6 @@
 package com.addons
 
-class HybridVolume {
+import com.margelo.nitro.addons.HybridVolumeSpec
+
+class HybridVolume: HybridVolumeSpec() {
 }

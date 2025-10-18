@@ -10,10 +10,7 @@
 
 
 #include <string>
-#include <NitroModules/Promise.hpp>
-#include <NitroModules/JPromise.hpp>
 #include <vector>
-#include <optional>
 #include <functional>
 #include "JFunc_void.hpp"
 
@@ -43,98 +40,43 @@ namespace margelo::nitro::addons {
   
 
   // Methods
-  std::shared_ptr<Promise<std::string>> JHybridClipboardSpec::getString() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("getString");
+  std::string JHybridClipboardSpec::getString() {
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JString>()>("getString");
+    auto __result = method(_javaPart);
+    return __result->toStdString();
+  }
+  std::vector<std::string> JHybridClipboardSpec::getStrings() {
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JArrayClass<jni::JString>>()>("getStrings");
     auto __result = method(_javaPart);
     return [&]() {
-      auto __promise = Promise<std::string>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JString>(__boxedResult);
-        __promise->resolve(__result->toStdString());
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
+      size_t __size = __result->size();
+      std::vector<std::string> __vector;
+      __vector.reserve(__size);
+      for (size_t __i = 0; __i < __size; __i++) {
+        auto __element = __result->getElement(__i);
+        __vector.push_back(__element->toStdString());
+      }
+      return __vector;
     }();
   }
-  std::shared_ptr<Promise<std::vector<std::string>>> JHybridClipboardSpec::getStrings() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("getStrings");
+  std::string JHybridClipboardSpec::getImagePNG() {
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JString>()>("getImagePNG");
     auto __result = method(_javaPart);
-    return [&]() {
-      auto __promise = Promise<std::vector<std::string>>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JArrayClass<jni::JString>>(__boxedResult);
-        __promise->resolve([&]() {
-          size_t __size = __result->size();
-          std::vector<std::string> __vector;
-          __vector.reserve(__size);
-          for (size_t __i = 0; __i < __size; __i++) {
-            auto __element = __result->getElement(__i);
-            __vector.push_back(__element->toStdString());
-          }
-          return __vector;
-        }());
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }();
+    return __result->toStdString();
   }
-  std::shared_ptr<Promise<std::string>> JHybridClipboardSpec::getImagePNG() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("getImagePNG");
+  std::string JHybridClipboardSpec::getImageJPG() {
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JString>()>("getImageJPG");
     auto __result = method(_javaPart);
-    return [&]() {
-      auto __promise = Promise<std::string>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JString>(__boxedResult);
-        __promise->resolve(__result->toStdString());
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }();
-  }
-  std::shared_ptr<Promise<std::string>> JHybridClipboardSpec::getImageJPG() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("getImageJPG");
-    auto __result = method(_javaPart);
-    return [&]() {
-      auto __promise = Promise<std::string>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JString>(__boxedResult);
-        __promise->resolve(__result->toStdString());
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }();
+    return __result->toStdString();
   }
   void JHybridClipboardSpec::setImage(const std::string& content) {
     static const auto method = javaClassStatic()->getMethod<void(jni::alias_ref<jni::JString> /* content */)>("setImage");
     method(_javaPart, jni::make_jstring(content));
   }
-  std::shared_ptr<Promise<std::string>> JHybridClipboardSpec::getImage() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("getImage");
+  std::string JHybridClipboardSpec::getImage() {
+    static const auto method = javaClassStatic()->getMethod<jni::local_ref<jni::JString>()>("getImage");
     auto __result = method(_javaPart);
-    return [&]() {
-      auto __promise = Promise<std::string>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JString>(__boxedResult);
-        __promise->resolve(__result->toStdString());
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }();
+    return __result->toStdString();
   }
   void JHybridClipboardSpec::setString(const std::string& content) {
     static const auto method = javaClassStatic()->getMethod<void(jni::alias_ref<jni::JString> /* content */)>("setString");
@@ -152,85 +94,30 @@ namespace margelo::nitro::addons {
       return __array;
     }());
   }
-  std::shared_ptr<Promise<bool>> JHybridClipboardSpec::hasString() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("hasString");
+  bool JHybridClipboardSpec::hasString() {
+    static const auto method = javaClassStatic()->getMethod<jboolean()>("hasString");
     auto __result = method(_javaPart);
-    return [&]() {
-      auto __promise = Promise<bool>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JBoolean>(__boxedResult);
-        __promise->resolve(static_cast<bool>(__result->value()));
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }();
+    return static_cast<bool>(__result);
   }
-  std::shared_ptr<Promise<bool>> JHybridClipboardSpec::hasImage() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("hasImage");
+  bool JHybridClipboardSpec::hasImage() {
+    static const auto method = javaClassStatic()->getMethod<jboolean()>("hasImage");
     auto __result = method(_javaPart);
-    return [&]() {
-      auto __promise = Promise<bool>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JBoolean>(__boxedResult);
-        __promise->resolve(static_cast<bool>(__result->value()));
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }();
+    return static_cast<bool>(__result);
   }
-  std::optional<std::shared_ptr<Promise<bool>>> JHybridClipboardSpec::hasURL() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("hasURL");
+  bool JHybridClipboardSpec::hasURL() {
+    static const auto method = javaClassStatic()->getMethod<jboolean()>("hasURL");
     auto __result = method(_javaPart);
-    return __result != nullptr ? std::make_optional([&]() {
-      auto __promise = Promise<bool>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JBoolean>(__boxedResult);
-        __promise->resolve(static_cast<bool>(__result->value()));
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }()) : std::nullopt;
+    return static_cast<bool>(__result);
   }
-  std::optional<std::shared_ptr<Promise<bool>>> JHybridClipboardSpec::hasNumber() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("hasNumber");
+  bool JHybridClipboardSpec::hasNumber() {
+    static const auto method = javaClassStatic()->getMethod<jboolean()>("hasNumber");
     auto __result = method(_javaPart);
-    return __result != nullptr ? std::make_optional([&]() {
-      auto __promise = Promise<bool>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JBoolean>(__boxedResult);
-        __promise->resolve(static_cast<bool>(__result->value()));
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }()) : std::nullopt;
+    return static_cast<bool>(__result);
   }
-  std::optional<std::shared_ptr<Promise<bool>>> JHybridClipboardSpec::hasWebURL() {
-    static const auto method = javaClassStatic()->getMethod<jni::local_ref<JPromise::javaobject>()>("hasWebURL");
+  bool JHybridClipboardSpec::hasWebURL() {
+    static const auto method = javaClassStatic()->getMethod<jboolean()>("hasWebURL");
     auto __result = method(_javaPart);
-    return __result != nullptr ? std::make_optional([&]() {
-      auto __promise = Promise<bool>::create();
-      __result->cthis()->addOnResolvedListener([=](const jni::alias_ref<jni::JObject>& __boxedResult) {
-        auto __result = jni::static_ref_cast<jni::JBoolean>(__boxedResult);
-        __promise->resolve(static_cast<bool>(__result->value()));
-      });
-      __result->cthis()->addOnRejectedListener([=](const jni::alias_ref<jni::JThrowable>& __throwable) {
-        jni::JniException __jniError(__throwable);
-        __promise->reject(std::make_exception_ptr(__jniError));
-      });
-      return __promise;
-    }()) : std::nullopt;
+    return static_cast<bool>(__result);
   }
   void JHybridClipboardSpec::onClipboardChanged(const std::function<void()>& callback) {
     static const auto method = javaClassStatic()->getMethod<void(jni::alias_ref<JFunc_void::javaobject> /* callback */)>("onClipboardChanged_cxx");
